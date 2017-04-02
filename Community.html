@@ -51,14 +51,6 @@
 	 	font-size:20px;
 	 	}
 
-	 button.link1 { 
-	 	font-size:20px;
-	 	}
-
-	 button.link2 { 
-	 	font-size:20px;
-	 	}
-
 	 }
 	 p.FranklinExt{
 	 	color: #ffffff;
@@ -188,7 +180,7 @@ span{font-size:20px;line-height:35px;}
 	<p class="Franklin" style="font-size: 20px;margin-top: 20px;"> Yang Li:<br/>
 	The Jack In The Box on Las Vegas blvd and Sunset blvd will give you 20% off. Just ask, they do it for taxis. I asked, and no problem. It's by the Las Vegas sign.
 	<br/>
-	3/25/2017 <button class="link1" id="hearts1" style="border: none; background: none; outline: none;" >&#9825</button> <strong id="love_counts1">32</strong> loves
+	3/25/2017 <button class="link" id="hearts" style="border: none; background: none; outline: none;" >&#9825</button> <strong id="love_counts">32</strong> loves
 	</p>
 	</div>
 	</div>
@@ -199,7 +191,7 @@ span{font-size:20px;line-height:35px;}
 	<p class="Franklin" style="font-size: 20px;margin-top: 20px;"> Throneksk:<br/>
 	Subway in the McDonald's parking lot across from the Mandalay Bay. 20% off same as taxis!
 	<br/>
-	2/25/2017 <button class="link2" id="hearts2" style="border: none; background: none; outline: none;" >&#9825</button> <strong id="love_counts2">9</strong> loves
+	2/25/2017 <button class="link" id="hearts" style="border: none; background: none; outline: none;" >&#9825</button> <strong id="love_counts">9</strong> loves
 	</p>
 	</div>
 	</div>
@@ -225,9 +217,8 @@ span{font-size:20px;line-height:35px;}
       <script src = "bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<script>
 
-	var heart_state = document.getElementById("hearts");
 	$(".link").click(function () {
-		
+		var heart_state = document.getElementById("hearts");
 		var lovenumber = document.getElementById("love_counts");
 		var number = parseInt(lovenumber.innerHTML);
 		var hidden = document.getElementById("hidden");
@@ -244,42 +235,6 @@ span{font-size:20px;line-height:35px;}
 		
 	})
 	
-
-	$(".link1").click(function () {
-		var heart_state = document.getElementById("hearts1");
-		var lovenumber = document.getElementById("love_counts1");
-		var number = parseInt(lovenumber.innerHTML);
-		var hidden = document.getElementById("hidden");
-		if (heart_state.innerHTML == hidden.innerHTML) {heart_state.innerHTML= "&#9825";
-			number -= 1;
-			lovenumber.innerHTML=number;
-	}
-		else
-			{heart_state.innerHTML= "&#9829";
-			number += 1;
-			lovenumber.innerHTML=number;
-		}
-		
-		
-	})
-
-	$(".link2").click(function () {
-		var heart_state = document.getElementById("hearts2");
-		var lovenumber = document.getElementById("love_counts2");
-		var number = parseInt(lovenumber.innerHTML);
-		var hidden = document.getElementById("hidden");
-		if (heart_state.innerHTML == hidden.innerHTML) {heart_state.innerHTML= "&#9825";
-			number -= 1;
-			lovenumber.innerHTML=number;
-	}
-		else
-			{heart_state.innerHTML= "&#9829";
-			number += 1;
-			lovenumber.innerHTML=number;
-		}
-		
-		
-	})
  	</script>
 </body>
 </html>
