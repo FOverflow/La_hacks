@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FoodFinder</title>
+	 <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+	 <link href = "bootstrap-3.3.7-dist/css/bootstrap.min.css" rel = "stylesheet">
+	 <style > 
+	 @font-face {
+    font-family: 'FranklinGothicCond';
+    src: url('FranklinGothic-Condensed1.eot'); /* IE9 Compat Modes */
+    src: url('FranklinGothic-Condensed1.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('FranklinGothic-Condensed1.woff') format('woff'), /* Modern Browsers */
+         url('FranklinGothic-Condensed1.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('FranklinGothic-Condensed1.svg#FranklinGothic-Condensed') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+@font-face {
+    font-family: 'FranklinGothicExtCond';
+    src: url('FranklinGothic-Regular2.eot'); /* IE9 Compat Modes */
+    src: url('FranklinGothic-Regular2.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('FranklinGothic-Regular2.woff') format('woff'), /* Modern Browsers */
+         url('FranklinGothic-Regular2.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('FranklinGothic-Regular2.svg#FranklinGothic-Regular2') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+	 p.Franklin{
+	 	color:#cc0000;
+	 	font-size:25px;
+	 	font-family:'FranklinGothicCond';
+	 	
+	 	margin-top: 70px;
+	 	vertical-align: bottom;
+
+	 } 
+	 strong{
+	 	{
+	 	color:#cc0000;
+	 	font-size:20px;
+	 	font-family:'FranklinGothicCond';
+	 	
+	 	margin-top: 0px;
+	 	vertical-align: bottom;
+
+	 } 
+
+	 button.link { 
+	 	font-size:20px;
+	 	}
+
+	 }
+	 p.FranklinExt{
+	 	color: #ffffff;
+	 	font-size: 25px;
+	 	font-family: "FranklinGothicExtCond";
+	 	display: inline-block;
+	 	
+	 }
+
+	 p.underline{
+   position:relative;
+}
+
+p.underline:after{
+   content:"";
+   position:absolute;
+   width:20%;
+   border-top:1px red;
+   bottom:0;
+   left:40%;
+}
+
+
+.zan:before,.zan1:before{
+content:;
+}
+
+/* after 伪元素在元素之后添加内容*/
+.zan:after,.zan1:after{
+content:" ";
+width:20px; height:30px;
+background:white;
+border-radius:30px 30px 0 0;
+-moz-transform: rotate(48deg);
+-ms-transform: rotate(48deg);
+-o-transform: rotate(48deg);
+-webkit-transform: rotate(48deg); 
+position:absolute;
+left:28px;top:0px;
+}
+.zan1:before,.zan1:after{background:red;}
+span{font-size:20px;line-height:35px;}
+
+	 </style>
+</head>
+
+<body>
+
+
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container" style="padding-left: 0px;padding-right: 0px">
+	<div class="row" >
+		<div class="col-xs-2 col-md-1" style="padding-left: 0px;padding-top:20px" >
+			<img class="img-rounded" src="LandingPage/logoPlaceholder.png" width="80" height="80">
+			
+		</div>
+		
+		<div class="col-xs-2 col-xs-offset-2 col-md-1 col-md-offset-1" >
+			<a href> <p class="Franklin"> Trending </p> </a>
+			
+			
+		</div>
+
+		<div class="col-xs-2 col-md-1 " style="margin-left: 50px ">
+			
+			<a href> <p class="Franklin"> Food </p> </a>
+			
+		</div>
+
+		<div class="col-xs-2 col-md-1" style="margin-left: 10px " >
+			
+			<a href> <p class="Franklin"> Dessert</p> </a>
+			
+		</div>
+		<div class="col-xs-2 col-md-1 " style="margin-left: 35px " >
+			
+			<a href> <p class="Franklin"> Drink</p> </a>
+			
+		</div>
+
+		<div class="col-xs-2 col-md-1 "  style="margin-left: 20px ">
+			
+			<a href> <p class="Franklin"> Latest</p> </a>
+			
+		</div>
+
+		<div class="col-xs-2 col-md-1 "  style="margin-left: 35px ">
+			<a href> <p class="Franklin">  Community </p> </a>
+
+		</div>
+
+		<div class="col-xs-2 col-xs-offset-2 col-md-1 col-md-offset-1" style="padding-left: 100px; padding-top:50px">
+			<img class="img-rounded" src="LandingPage/Account_icon.png" width="60" height="60">
+			
+		</div>
+
+	</div>
+
+	</div>
+	</nav>
+
+
+
+
+	<div class="container-fluid" style="padding-left: 0px;padding-right: 0px" >
+	<div class="row" style="padding-top:0px">
+	<div class="col-md-3 col-md-offset-2">
+		<p class="Franklin" style="font-size: 35px"> Discount Forum </p></div>
+	</div>
+
+	<div class="row" style="padding-top: 0px">
+	<div class="col-md-8 col-md-offset-2">
+	<p hidden id="hidden">&#9829</p> 
+	<p class="Franklin" style="font-size: 20px;margin-top: 20px;"> RongZhang:<br/>
+	Universal studio is offering 10% discount when you purchase food inside the parks and pay with American Express Cards. Expires in a month.
+	<br/>
+	3/31/2017 <button class="link" id="hearts" style="border: none; background: none; outline: none;" >&#9829</button> <strong id="love_counts">38</strong> loves
+	</p>
+	</div>
+	</div>
+
+	<div class="row" style="padding-top: 0px">
+	<div class="col-md-8 col-md-offset-2">
+	<p hidden id="hidden">&#9829</p> 
+	<p class="Franklin" style="font-size: 20px;margin-top: 20px;"> Yang Li:<br/>
+	The Jack In The Box on Las Vegas blvd and Sunset blvd will give you 20% off. Just ask, they do it for taxis. I asked, and no problem. It's by the Las Vegas sign.
+	<br/>
+	3/25/2017 <button class="link" id="hearts" style="border: none; background: none; outline: none;" >&#9825</button> <strong id="love_counts">32</strong> loves
+	</p>
+	</div>
+	</div>
+
+	<div class="row" style="padding-top: 0px">
+	<div class="col-md-8 col-md-offset-2">
+	<p hidden id="hidden">&#9829</p> 
+	<p class="Franklin" style="font-size: 20px;margin-top: 20px;"> Throneksk:<br/>
+	Subway in the McDonald's parking lot across from the Mandalay Bay. 20% off same as taxis!
+	<br/>
+	2/25/2017 <button class="link" id="hearts" style="border: none; background: none; outline: none;" >&#9825</button> <strong id="love_counts">9</strong> loves
+	</p>
+	</div>
+	</div>
+
+
+
+	<div class="row" style="padding-top:0px; background-color:#aa0404">
+		<div class="col-md-3 col-md-offset-3">
+		<p class="FranklinExt" style="padding-top :30px" >©FoodFinder 2017 at LA Hacks</p></div>
+		
+		<a href><p class="FranklinExt" style="padding-top :30px;padding-left: 0px">·Contact us </p></a></div>
+		
+	</div>
+
+	<!--TODO: add rows and columns -->
+
+
+</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src = "https://code.jquery.com/jquery.js"></script>
+      
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src = "bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script>
+
+	$(".link").click(function () {
+		var heart_state = document.getElementById("hearts");
+		var lovenumber = document.getElementById("love_counts");
+		var number = parseInt(lovenumber.innerHTML);
+		var hidden = document.getElementById("hidden");
+		if (heart_state.innerHTML == hidden.innerHTML) {heart_state.innerHTML= "&#9825";
+			number -= 1;
+			lovenumber.innerHTML=number;
+	}
+		else
+			{heart_state.innerHTML= "&#9829";
+			number += 1;
+			lovenumber.innerHTML=number;
+		}
+		
+		
+	})
+	
+ 	</script>
+</body>
+</html>
